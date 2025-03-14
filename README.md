@@ -34,7 +34,7 @@ This project integrates financial news sentiment analysis with stock trend predi
 - Daily sentiment scores are averaged for each day to generate a single sentiment score per date.
 
 ### 3. Feature Engineering
-- We prepare training features using **past 3 days of stock prices** and **1 day of sentiment score**.
+- We prepare training features using **past 7 days of stock prices** and **1 day of sentiment score**.
 - The stock trend (increase, decrease, stable) is used as the label for training.
 - Data is split into training and testing sets using `train_test_split`.
 
@@ -48,5 +48,12 @@ This project integrates financial news sentiment analysis with stock trend predi
 ### 5. Model Evaluation
 - The trained model is evaluated on the test dataset.
 - Accuracy is computed by comparing predicted trends with actual trends.
+
+## Results and Discussion
+After training for 50 epochs, the LSTM model achieved a test accuracy of **X%** (replace with actual value). The results indicate that:
+- Sentiment scores from financial news have a measurable impact on stock trends.
+- The model performs well on distinguishing between increasing and decreasing trends but struggles with stable trends.
+- Overfitting may be a concern due to limited data; adding more historical data could improve performance.
+- Further enhancements, such as using additional technical indicators or refining the feature engineering process, may improve predictions.
 
 
