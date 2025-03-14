@@ -1,59 +1,47 @@
-# Stock Price Analysis using Sentiment and LSTM
+# Stock Price Analysis Using Sentiment and LSTM
 
-This project integrates financial news sentiment analysis with stock trend prediction using an LSTM (Long Short-Term Memory) neural network. It utilizes **FinBERT**, a financial sentiment analysis model, to extract sentiment scores from financial news and combines them with stock price trends to forecast future stock movements.
+This project evaluates the effect of financial news on stock trends. It utilizes **FinBERT**, a financial sentiment analysis model, to extract sentiment scores from financial news and combines them with stock price trends to forecast future stock movements using **LSTM**.
 
 ## Features
 - **Sentiment Analysis with FinBERT**: Extracts sentiment scores from financial news articles.
 - **Stock Trend Prediction**: Uses LSTM to analyze past stock prices and sentiment data for trend forecasting.
 - **Automated Data Processing**: Parses stock and news data, normalizes features, and prepares datasets for training.
 
-## Repository Structure
-```
-├── data/                    # Contains stock price and news datasets
-│   ├── AAPL_trend.csv       # Historical stock data for Apple
-│   ├── newsData.json        # Financial news articles
-├── models/                  # Saved models (if needed)
-├── notebooks/               # Jupyter Notebooks for experimentation
-├── src/                     # Source code
-│   ├── sentiment_analysis.py # FinBERT-based sentiment processing
-│   ├── lstm_model.py         # LSTM model for stock trend prediction
-│   ├── train.py              # Training script
-│   ├── evaluate.py           # Model evaluation script
-├── README.md                # Project documentation (this file)
-└── requirements.txt          # Required Python packages
-```
-
 ## Code Flow
 ### 1. Data Collection
-- **Stock Data**: We use historical stock price data stored in `AAPL_trend.csv`. This file includes closing prices and trend labels (increase, decrease, stable).
-- **News Data**: Financial news articles are stored in `newsData.json`. Each entry contains the title, description, and content of an article.
+- **Stock Data**: We use historical stock price data acquired from AlphaVantage, stored in `AAPL_historical.csv`. This data is processed to derive trends, which are then stored in `AAPL_trend.csv`. This file includes closing prices and trend labels (increase, decrease, stable).
+- **News Data**: Financial news articles are stored in `newsData.json`, where each entry contains the title, description, and content of an article.
+- Data is extracted for the period from February 2024 to February 2025.
 
 ### 2. Sentiment Analysis
-- We use the **FinBERT** model to analyze the sentiment of financial news articles.
-- Each article's sentiment score is calculated as **Positive Sentiment - Negative Sentiment**.
-- Daily sentiment scores are averaged for each day to generate a single sentiment score per date.
+- The **FinBERT** model is used to analyze the sentiment of financial news articles.
+- Sentiment scores are calculated based on the article title as **Positive Sentiment - Negative Sentiment**.
+- Sentiment scores for all articles on a given date are averaged to generate a single sentiment score per day.
 
 ### 3. Feature Engineering
-- We prepare training features using **past 7 days of stock prices** and **1 day of sentiment score**.
-- The stock trend (increase, decrease, stable) is used as the label for training.
-- Data is split into training and testing sets using `train_test_split`.
+- Training features are created using **stock prices from the past 7 days** and **the sentiment score from 1 day**.
+- The stock trend (increase, decrease, stable) serves as the label for training.
+- The dataset is split into training and testing sets using `train_test_split`.
 
 ### 4. Model Training
-- We define an **LSTM-based neural network** with:
-  - Input: Stock prices and sentiment scores
-  - Hidden layers: LSTM layers to capture time-series dependencies
-  - Output: A classification layer predicting the stock trend (increase, decrease, stable)
-- The model is trained using **CrossEntropyLoss** and the **Adam optimizer** for 50 epochs.
+- The **LSTM-based neural network** is structured as follows:
+  - **Input**: A feature vector comprising stock prices and sentiment scores.
+  - **Hidden Layers**: LSTM layers to capture time-series dependencies.
+  - **Output**: A classification layer predicting the stock trend (increase, decrease, stable).
+- The model is trained using **CrossEntropyLoss** and the **Adam optimizer** for 30,000 epochs.
 
 ### 5. Model Evaluation
 - The trained model is evaluated on the test dataset.
-- Accuracy is computed by comparing predicted trends with actual trends.
+- Accuracy is measured by comparing predicted trends with actual trends.
 
 ## Results and Discussion
-After training for 50 epochs, the LSTM model achieved a test accuracy of **X%** (replace with actual value). The results indicate that:
-- Sentiment scores from financial news have a measurable impact on stock trends.
-- The model performs well on distinguishing between increasing and decreasing trends but struggles with stable trends.
-- Overfitting may be a concern due to limited data; adding more historical data could improve performance.
-- Further enhancements, such as using additional technical indicators or refining the feature engineering process, may improve predictions.
+After training for 30,000 epochs, the LSTM model achieved a test accuracy of **70%**. Key observations include:
+- Sentiment scores played a role in some cases but did not generalize well across all instances.
+- There was no significant improvement in accuracy compared to a model using only past stock prices.
+- This limitation is attributed to the news headline collection process, as our data sources only allow keyword-based extraction rather than direct retrieval of relevant stock-related headlines.
+- Stock prices are influenced by numerous additional factors (e.g., political events) that are difficult to incorporate into the model.
 
-
+## Future Work
+- Implementing **Stochastic Differential Equation (SDE)**-based models for stock price prediction.
+- Enhancing news extraction methods, expanding the dataset, and improving sentiment analysis techniques.
+- Incorporating additional external factors that influence stock prices to improve predictive accuracy.
