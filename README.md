@@ -1,4 +1,4 @@
-# Stock Price Analysis Using Sentiment and LSTM
+# Stock Trend Analysis Using Sentiment and Historical Data
 
 This project evaluates the effect of financial news on stock trends. It utilizes **FinBERT**, a financial sentiment analysis model, to extract sentiment scores from financial news and combines them with stock price trends to forecast future stock movements using **LSTM**.
 
@@ -11,7 +11,7 @@ This project evaluates the effect of financial news on stock trends. It utilizes
 ### 1. Data Collection
 - **Stock Data**: We use historical stock price data acquired from AlphaVantage, stored in `AAPL_historical.csv`. This data is processed to derive trends, which are then stored in `AAPL_trend.csv`. This file includes closing prices and trend labels (increase, decrease, stable).
 - **News Data**: Financial news articles are stored in `newsData.json`, where each entry contains the title, description, and content of an article.
-- Data is extracted for the period from February 2024 to February 2025.
+- Data is extracted for the period from February 2024 to February 2025, for Apple Inc. stock (ticker=`AAPL`).
 
 ### 2. Sentiment Analysis
 - The **FinBERT** model is used to analyze the sentiment of financial news articles.
