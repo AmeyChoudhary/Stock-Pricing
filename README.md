@@ -1,6 +1,6 @@
-# Stock Sentiment Analysis with LSTM
+# Stock Price Analysis using Sentiment and LSTM
 
-This project integrates financial news sentiment analysis with stock trend prediction using an LSTM (Long Short-Term Memory) neural network. It utilizes **FinBERT**, a financial sentiment analysis model, to extract sentiment scores from financial news and combines them with stock price trends to forecast stock movements.
+This project integrates financial news sentiment analysis with stock trend prediction using an LSTM (Long Short-Term Memory) neural network. It utilizes **FinBERT**, a financial sentiment analysis model, to extract sentiment scores from financial news and combines them with stock price trends to forecast future stock movements.
 
 ## Features
 - **Sentiment Analysis with FinBERT**: Extracts sentiment scores from financial news articles.
@@ -23,44 +23,30 @@ This project integrates financial news sentiment analysis with stock trend predi
 └── requirements.txt          # Required Python packages
 ```
 
-## Installation
-```sh
-# Clone the repository
-git clone https://github.com/your-repo/stock-sentiment-lstm.git
-cd stock-sentiment-lstm
+## Code Flow
+### 1. Data Collection
+- **Stock Data**: We use historical stock price data stored in `AAPL_trend.csv`. This file includes closing prices and trend labels (increase, decrease, stable).
+- **News Data**: Financial news articles are stored in `newsData.json`. Each entry contains the title, description, and content of an article.
 
-# Install dependencies
-pip install -r requirements.txt
-```
+### 2. Sentiment Analysis
+- We use the **FinBERT** model to analyze the sentiment of financial news articles.
+- Each article's sentiment score is calculated as **Positive Sentiment - Negative Sentiment**.
+- Daily sentiment scores are averaged for each day to generate a single sentiment score per date.
 
-## Usage
-### 1. Process Sentiment Data
-```sh
-python src/sentiment_analysis.py
-```
-### 2. Train the LSTM Model
-```sh
-python src/train.py
-```
-### 3. Evaluate the Model
-```sh
-python src/evaluate.py
-```
+### 3. Feature Engineering
+- We prepare training features using **past 3 days of stock prices** and **1 day of sentiment score**.
+- The stock trend (increase, decrease, stable) is used as the label for training.
+- Data is split into training and testing sets using `train_test_split`.
 
-## Dependencies
-- Python 3.8+
-- PyTorch
-- Transformers (Hugging Face)
-- Pandas & NumPy
-- Scikit-learn
+### 4. Model Training
+- We define an **LSTM-based neural network** with:
+  - Input: Stock prices and sentiment scores
+  - Hidden layers: LSTM layers to capture time-series dependencies
+  - Output: A classification layer predicting the stock trend (increase, decrease, stable)
+- The model is trained using **CrossEntropyLoss** and the **Adam optimizer** for 50 epochs.
 
-## Future Improvements
-- Integrate real-time stock and news data
-- Experiment with different deep learning architectures
-- Improve feature selection for better prediction accuracy
+### 5. Model Evaluation
+- The trained model is evaluated on the test dataset.
+- Accuracy is computed by comparing predicted trends with actual trends.
 
-## License
-This project is licensed under the MIT License.
 
----
-🚀 Happy Coding!
