@@ -1,0 +1,1 @@
+{"_step":99,"train_loss":553.5963134765625,"num_layers":2,"test_mse":736.8076782226562,"epoch":10000,"_wandb":{"runtime":55},"lr":0.01,"_runtime":55.8629006,"hidden_size":32,"_timestamp":1.741952599539715e+09}

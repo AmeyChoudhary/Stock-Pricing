@@ -1,0 +1,16 @@
+{"time":"2025-03-14T17:05:50.8415601+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"d:\\Finance\\Finance\\Option-Pricing\\Option_Pricing\\wandb\\run-20250314_170550-jm7v112w\\logs\\debug-core.log"}
+{"time":"2025-03-14T17:05:50.9596096+05:30","level":"INFO","msg":"created new stream","id":"jm7v112w"}
+{"time":"2025-03-14T17:05:50.9601087+05:30","level":"INFO","msg":"stream: started","id":"jm7v112w"}
+{"time":"2025-03-14T17:05:50.9601087+05:30","level":"INFO","msg":"handler: started","stream_id":"jm7v112w"}
+{"time":"2025-03-14T17:05:50.9601087+05:30","level":"INFO","msg":"sender: started","stream_id":"jm7v112w"}
+{"time":"2025-03-14T17:05:50.9601087+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"jm7v112w"}
+{"time":"2025-03-14T17:05:51.3186929+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-14T17:07:18.6924523+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-14T17:07:18.6929529+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-14T17:07:19.6974454+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.3870273,"progress":"3.1KB/3.1KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.3870273,"progress":"212B/212B"},{"desc":"uploading config.yaml","runtime_seconds":0.1060443,"progress":"686B/686B"}],"total_operations":3}}
+{"time":"2025-03-14T17:07:20.6506402+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-14T17:07:21.0191982+05:30","level":"INFO","msg":"stream: closing","id":"jm7v112w"}
+{"time":"2025-03-14T17:07:21.0191982+05:30","level":"INFO","msg":"handler: closed","stream_id":"jm7v112w"}
+{"time":"2025-03-14T17:07:21.0191982+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"jm7v112w"}
+{"time":"2025-03-14T17:07:21.0191982+05:30","level":"INFO","msg":"sender: closed","stream_id":"jm7v112w"}
+{"time":"2025-03-14T17:07:21.0191982+05:30","level":"INFO","msg":"stream: closed","id":"jm7v112w"}
