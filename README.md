@@ -7,7 +7,7 @@ This project evaluates the effect of financial news on stock trends. It utilizes
 - **Stock Trend Prediction**: Uses LSTM to analyze past stock prices and sentiment data for trend forecasting.
 - **Automated Data Processing**: Parses stock and news data, normalizes features, and prepares datasets for training.
 
-## Code Flow
+## Stock Trend Prediction
 ### 1. Data Collection
 - **Stock Data**: We use historical stock price data acquired from AlphaVantage, stored in `AAPL_historical.csv`. This data is processed to derive trends, which are then stored in `AAPL_trend.csv`. This file includes closing prices and trend labels (increase, decrease, stable).
 - **News Data**: Financial news articles are stored in `newsData.json`, where each entry contains the title, description, and content of an article.
@@ -40,8 +40,14 @@ After training for 30,000 epochs, the LSTM model achieved a test accuracy of **7
 - There was no significant improvement in accuracy compared to a model using only past stock prices.
 - This limitation is attributed to the news headline collection process, as our data sources only allow keyword-based extraction rather than direct retrieval of relevant stock-related headlines.
 - Stock prices are influenced by numerous additional factors (e.g., political events) that are difficult to incorporate into the model.
+Results obtained for stock trend prediction: [https://wandb.ai/its_mrpsycho/stock_trend_lstm/reports/Stock-Trend-Prediction--VmlldzoxMTc5ODgxNw]
+
+### Stock price prediction
+- This follows the same workflow as stock trend prediction, the only change is that LSTM is used as a regressor here, instead of a classifer.
+Here are the results obtained for stock price prediction: [https://wandb.ai/its_mrpsycho/stock_price_prediction/reports/Stock-Price-Prediction--VmlldzoxMTc5ODc1OA]
 
 ## Future Work
 - Implementing **Stochastic Differential Equation (SDE)**-based models for stock price prediction.
 - Enhancing news extraction methods, expanding the dataset, and improving sentiment analysis techniques.
 - Incorporating additional external factors that influence stock prices to improve predictive accuracy.
+
