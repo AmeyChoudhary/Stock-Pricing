@@ -1,0 +1,1 @@
+{"loss":0.5472011566162109,"hidden_size":32,"_timestamp":1.7419506057300434e+09,"accuracy":0.56,"lr":0.0001,"_runtime":92.7162319,"epoch":10000,"_step":99,"num_layers":3,"_wandb":{"runtime":92}}

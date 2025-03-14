@@ -1,0 +1,35 @@
+2025-03-14 16:40:18,392 INFO    Thread-26 (_run_job):20568 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-03-14 16:40:18,392 INFO    Thread-26 (_run_job):20568 [wandb_setup.py:_flush():67] Configure stats pid to 20568
+2025-03-14 16:40:18,392 INFO    Thread-26 (_run_job):20568 [wandb_setup.py:_flush():67] Loading settings from C:\Users\sanni\.config\wandb\settings
+2025-03-14 16:40:18,392 INFO    Thread-26 (_run_job):20568 [wandb_setup.py:_flush():67] Loading settings from d:\Finance\Finance\Option-Pricing\Option_Pricing\wandb\settings
+2025-03-14 16:40:18,392 INFO    Thread-26 (_run_job):20568 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-03-14 16:40:18,392 INFO    Thread-26 (_run_job):20568 [wandb_init.py:setup_run_log_directory():647] Logging user logs to d:\Finance\Finance\Option-Pricing\Option_Pricing\wandb\run-20250314_164018-fhyew90p\logs\debug.log
+2025-03-14 16:40:18,393 INFO    Thread-26 (_run_job):20568 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to d:\Finance\Finance\Option-Pricing\Option_Pricing\wandb\run-20250314_164018-fhyew90p\logs\debug-internal.log
+2025-03-14 16:40:18,393 INFO    Thread-26 (_run_job):20568 [wandb_init.py:monkeypatch_ipython():599] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001F7B9915C00>
+2025-03-14 16:40:18,393 INFO    Thread-26 (_run_job):20568 [wandb_init.py:init():761] calling init triggers
+2025-03-14 16:40:18,393 INFO    Thread-26 (_run_job):20568 [wandb_init.py:init():766] wandb.init called with sweep_config: {'hidden_size': 32, 'lr': 0.001, 'num_epochs': 10000, 'num_layers': 2}
+config: {'_wandb': {}}
+2025-03-14 16:40:18,393 INFO    Thread-26 (_run_job):20568 [wandb_init.py:init():784] starting backend
+2025-03-14 16:40:18,393 INFO    Thread-26 (_run_job):20568 [wandb_init.py:init():788] sending inform_init request
+2025-03-14 16:40:18,395 INFO    Thread-26 (_run_job):20568 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=spawn, using: spawn
+2025-03-14 16:40:18,395 INFO    Thread-26 (_run_job):20568 [wandb_init.py:init():798] backend started and connected
+2025-03-14 16:40:18,396 INFO    Thread-26 (_run_job):20568 [wandb_run.py:_config_callback():1261] config_cb None None {'hidden_size': 32, 'lr': 0.001, 'num_epochs': 10000, 'num_layers': 2}
+2025-03-14 16:40:18,396 INFO    Thread-26 (_run_job):20568 [wandb_run.py:_label_probe_notebook():1204] probe notebook
+2025-03-14 16:40:18,409 INFO    Thread-26 (_run_job):20568 [wandb_init.py:init():891] updated telemetry
+2025-03-14 16:40:18,446 INFO    Thread-26 (_run_job):20568 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-03-14 16:40:18,876 INFO    Thread-26 (_run_job):20568 [wandb_init.py:init():990] starting run threads in backend
+2025-03-14 16:40:19,281 INFO    Thread-26 (_run_job):20568 [wandb_run.py:_console_start():2375] atexit reg
+2025-03-14 16:40:19,281 INFO    Thread-26 (_run_job):20568 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-03-14 16:40:19,282 INFO    Thread-26 (_run_job):20568 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-03-14 16:40:19,283 INFO    Thread-26 (_run_job):20568 [wandb_run.py:_redirect():2315] Redirects installed.
+2025-03-14 16:40:19,284 INFO    Thread-26 (_run_job):20568 [wandb_init.py:init():1032] run started, returning control to user process
+2025-03-14 16:41:25,030 INFO    Thread-26 (_run_job):20568 [wandb_run.py:_finish():2112] finishing run its_mrpsycho/stock_trend_lstm/fhyew90p
+2025-03-14 16:41:25,030 INFO    Thread-26 (_run_job):20568 [jupyter.py:save_history():458] not saving jupyter history
+2025-03-14 16:41:25,031 INFO    Thread-26 (_run_job):20568 [jupyter.py:save_ipynb():386] not saving jupyter notebook
+2025-03-14 16:41:25,031 INFO    Thread-26 (_run_job):20568 [wandb_init.py:_jupyter_teardown():581] cleaning up jupyter logic
+2025-03-14 16:41:25,031 INFO    Thread-26 (_run_job):20568 [wandb_run.py:_atexit_cleanup():2340] got exitcode: 0
+2025-03-14 16:41:25,031 INFO    Thread-26 (_run_job):20568 [wandb_run.py:_restore():2322] restore
+2025-03-14 16:41:25,031 INFO    Thread-26 (_run_job):20568 [wandb_run.py:_restore():2328] restore done
+2025-03-14 16:41:27,363 INFO    Thread-26 (_run_job):20568 [wandb_run.py:_footer_history_summary_info():3956] rendering history
+2025-03-14 16:41:27,364 INFO    Thread-26 (_run_job):20568 [wandb_run.py:_footer_history_summary_info():3988] rendering summary
+2025-03-14 16:41:27,366 INFO    Thread-26 (_run_job):20568 [wandb_run.py:_footer_sync_info():3917] logging synced files

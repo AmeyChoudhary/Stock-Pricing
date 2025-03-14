@@ -1,0 +1,42 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "CPython 3.10.16",
+  "startedAt":  "2025-03-14T11:13:45.999792Z",
+  "program":  "d:\\Finance\\Finance\\Option-Pricing\\Option_Pricing\\stockTrendPrediction.ipynb",
+  "codePath":  "Option_Pricing\\stockTrendPrediction.ipynb",
+  "git":  {
+    "remote":  "https://github.com/AmeyChoudhary/Option-Pricing.git",
+    "commit":  "ee85fbe89debbc5283c90f13b8bbd746ac15a4b6"
+  },
+  "email":  "sannidhya.gupta@research.iiit.ac.in",
+  "root":  "d:\\Finance\\Finance\\Option-Pricing\\Option_Pricing",
+  "host":  "sanidhya",
+  "executable":  "c:\\Users\\sanni\\miniconda3\\envs\\finance\\python.exe",
+  "codePathLocal":  "stockTrendPrediction.ipynb",
+  "cpu_count":  8,
+  "cpu_count_logical":  16,
+  "gpu":  "NVIDIA GeForce RTX 3070 Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "534773755904",
+      "used":  "333369442304"
+    }
+  },
+  "memory":  {
+    "total":  "16799985664"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  16
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 3070 Laptop GPU",
+      "memoryTotal":  "8589934592",
+      "cudaCores":  5120,
+      "architecture":  "Ampere"
+    }
+  ],
+  "cudaVersion":  "12.7"
+}
